@@ -27,14 +27,14 @@ double findMedianSortedArray(int* nums1, int nums1Size, int* nums2, int nums2Siz
             if ((m + n) % 2 == 0){
                 int leftMax = (maxLeftX > maxLeftY) ? maxLeftX : maxLeftY;
                 int rightMin = (minRightX < minRighty) ? minRightX : minRighty;
-                return (leftMax + rightMin) / 2.0;
+                return ((double)leftMax + (double)rightMin) / 2.0;
             }else{
                 return (double)((maxLeftX > maxLeftY) ? maxLeftX : maxLeftY);
             }
-        }else if(maxLeftX > maxLeftY){
+        }else if(maxLeftX > minRighty){
             r = partitionX - 1;
         }else{
-            l = partitionY + 1;
+            l = partitionX + 1;
         }
     }
     return 0.0;
