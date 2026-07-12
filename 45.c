@@ -11,7 +11,7 @@ int jump(int* nums, int numsSize) {
 
         if (i == currentEnd) {
             jumps++;
-            currentEnd = farthest;
+            currentEnd = farthest; // current end describes the end of the region. check out - https://www.youtube.com/watch?v=CsDI-yQuGeM
         }
     }
 
