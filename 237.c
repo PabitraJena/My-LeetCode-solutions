@@ -1,0 +1,16 @@
+// Delete Node in a linked list
+
+#include <stdio.h>
+#include <stdlib.h>
+
+struct ListNode {
+    int val;
+    struct ListNode *next;
+};
+
+void deleteNode(struct ListNode* node) {
+    struct ListNode *temp = node->next;
+    node->val = temp->val;
+    node->next = temp->next;
+    free(temp);
+}
