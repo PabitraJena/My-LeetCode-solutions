@@ -1,0 +1,16 @@
+// 1816. Truncate Sentence
+
+char* truncateSentence(char* s, int k) {
+    int count = 0;
+
+    for (int i = 0; s[i] != '\0'; i++){
+        if (s[i] == ' '){
+            count++;
+            if (count == k){
+                s[i] = '\0';
+                break;
+            }
+        }
+    }
+    return s;
+}
